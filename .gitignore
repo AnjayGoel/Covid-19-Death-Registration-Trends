@@ -1,0 +1,9 @@
+csv
+*.csv
+*.db
+*.env
+*.log
+sqlite
+__pycache__
+venv
+.idea
