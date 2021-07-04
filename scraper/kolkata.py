@@ -34,7 +34,7 @@ def query_scraper(query_dict):
         else:
             return []
     except:
-        logging.error("Error parsing resp")
+        logging.error("Error parsing resp",exc_info=True)
         return []
 
 

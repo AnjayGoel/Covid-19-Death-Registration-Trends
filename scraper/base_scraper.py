@@ -80,8 +80,8 @@ class Scraper:
                 self.conn.commit()
                 self.conn.close()
                 break
-            except Exception as e:
-                logging.error("Sqlite insert error")
+            except:
+                logging.error("Sqlite insert error", exc_info=True)
 
     def worker_func(self, query):
         try:

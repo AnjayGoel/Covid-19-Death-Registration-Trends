@@ -33,7 +33,7 @@ def query_scraper(query_dict: dict):
         df["dateOfDeath"] = query_dict["params"]["dateOfDeath"]
         df.drop(columns=["print"], inplace=True)
         return json.loads(df.to_json(orient="records"))
-    except Exception as e:
+    except:
         return []
 
 

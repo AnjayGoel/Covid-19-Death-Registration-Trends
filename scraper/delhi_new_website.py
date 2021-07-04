@@ -78,8 +78,8 @@ def query_scraper(query):
         data = json.loads(resp.text)
         data = [make_common_dict(i) for i in data]
         return data
-    except Exception as e:
-        logging.error("Error parsing delhi new website")
+    except:
+        logging.error("Error parsing delhi new website", exc_info=True)
         return []
 
 

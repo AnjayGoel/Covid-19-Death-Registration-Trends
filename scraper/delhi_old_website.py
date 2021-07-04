@@ -95,7 +95,7 @@ def query_scraper(query_dict):
             return [make_common_dict(i) for i in df.to_dict(orient="records")]
         else:
             return []
-    except Exception as e:
+    except:
         logging.error("%s", str(query_dict), exc_info=True)
         return []
 
